@@ -1,0 +1,160 @@
+/* Estilos generales de la página */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url('imagenVortk.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: #f63ff7;
+}
+
+/* Barra Superior fija para computadora */
+.barraSuperior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #010103;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+/* Logotipo en PC */
+.fotoAgencia {
+    height: 45px;
+    width: auto;
+    max-width: 120px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    object-fit: cover;
+}
+
+/* Contenedor de páginas en PC */
+.paginas {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.botonOpciones {
+    display: none; /* Oculto en computadoras */
+}
+
+/* Botones de navegación */
+.botonesPaginas {
+    color: #01d3ef;
+    padding: 8px 12px;
+    background-color: #010103;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.botonesPaginas:active {
+    background-color: #4f14e0;
+    color: #222831;
+}
+
+.botonesPaginas:hover {
+    background-color: #4f14e0;
+    color: #010103;
+}
+
+.botonCreador {
+    color: #f63ff7;
+    padding: 8px 12px;
+    background-color: #8c14e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Contenido de las secciones */
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+/* Oculta todas las secciones por defecto */
+.seccion {
+    display: none;
+}
+
+/* Muestra únicamente la sección activa y la empuja hacia abajo por la barra fija */
+.seccion.activa {
+    display: block;
+    padding-top: 100px;
+}
+
+/* --- Estilos para pantallas pequeñas (Celulares / hasta 1000px) --- */
+@media (max-width: 1000px) {
+    .barraSuperior {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* Logotipo centrado en la barra superior para celulares */
+    .fotoAgencia {
+        height: 45px;
+        width: auto;
+        margin: 5px 0;
+    }
+
+    .paginas {
+        display: none; /* Oculto por defecto hasta hacer clic en el menú */
+        flex-direction: column;
+        background-color: #010103;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 90%;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .paginas.activo {
+        display: flex;
+    }
+
+    .botonOpciones {
+        display: block;
+        background-color: #010103;
+        color: #ffffff;
+        border: none;
+        font-size: 1.8em;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
+
+    .botonesPaginas {
+        width: 100%;
+        text-align: left;
+        margin-left: 0 !important;
+    }
+
+    .botonCreador {
+        width: 100%;
+        text-align: left;
+        margin-left: 0 !important;
+    }
+}

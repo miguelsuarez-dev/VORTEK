@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="barraSuperior">
+            <img src="logotipoAgencia.png" alt="logotipo" class="fotoAgencia">
+            <button id="botonOpciones" class="botonOpciones">☰</button>
+            <div class="paginas" id="paginas">
+                <button onclick="mostrarPagina('inicio')" class="botonesPaginas">INICIO</button>
+                <button onclick="mostrarPagina('managers')" class="botonesPaginas">MANAGERS</button>
+                <button onclick="mostrarPagina('live')" class="botonesPaginas">LIVE</button>
+                <button onclick="mostrarPagina('contacto')" class="botonesPaginas">CONTACTO</button>
+                <button onclick="mostrarPagina('sobrenosotros')" class="botonesPaginas">SOBRE NOSOTROS</button>
+                <button class="botonCreador">
+                    <a href="https://wa.me/3173975979">QUIERO SER CREADOR/A</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section id="inicio" class="seccion activa">
+        <div class="contenido">
+            <div class="texto">
+                <h1>inicio</h1>
+                <p>INICIO PAGINA</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="managers" class="seccion">
+        <div class="contenido">
+            <div class="texto">
+                <h1>managers</h1>
+                <p>MANAGERS PAGINA</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="live" class="seccion">
+        <div class="contenido">
+            <div class="texto">
+                <h1>LIVE</h1>
+                <p>live</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <div class="contenido">
+            <div class="texto">
+                <h1>contacto</h1>
+                <p>CONTACTO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobrenosotros" class="seccion">
+        <div class="contenido">
+            <div class="texto">
+                <h1>sobre nosotros</h1>
+                <p>SOBRE NOSOTROS</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
